@@ -1,7 +1,7 @@
 // Product Wise Analysis:
 // ----------------------
 
-:load 1_load_data.scala
+:load load_data.scala
 
 val prodRdd=ePairRdd.map{case(oid,cid,qt,cp,sp,ts,rating,pCat,pId,sp_type,oStat,pWt,pLen,pHt,pWidth,cCity,cState,sId,sCity,sState,sInstal)=>
       (pId,(List(rating),List(sp)))}.reduceByKey{case(a,b)=>(a._1++b._1,a._2++b._2)}.map{case(a,(b,c))=>(a,b.sum*1.0/b.length,c.sum/c.length,c.length)}
