@@ -1,7 +1,7 @@
 // Potential Customer Location: - Statewise
 // ----------------------------
 
-:load 1_load_data.scala
+:load load_data.scala
 
 val ePairRdd13 = ePairRdd.map{ case(oid,cid,qt,cp,sp,ts,rating,pCat,pId,sp_type,
        oStat,pWt,pLen,pHt,pWidth,cCity,
