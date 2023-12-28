@@ -1,7 +1,7 @@
 // Customer Segmentation:
 // ----------------------
 
-:load 1_load_data.scala
+:load load_data.scala
 
 val ePairRdd2 = ePairRdd.map{ case(oid,cid,qt,cp,sp,ts,rating,pCat,pId,sp_type,
        oStat,pWt,pLen,pHt,pWidth,cCity,
